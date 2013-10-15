@@ -1,1 +1,11 @@
---- {}
+---
+cassandra/apache-cassandra-1.2.10-bin.tar.gz:
+  object_id: 04019564-61f3-4edf-b7bf-df884fd007d4
+  sha: !binary |-
+    MWVkZGIzZTc5MGRhYTBjODhmMTM4YmRhYWQxOGQzZmE3MWQ3NzdkNA==
+  size: 16803498
+java/jdk-7u21-linux-x64.tar.gz:
+  object_id: d39d59ab-6eb9-4523-97b7-32c362335cda
+  sha: !binary |-
+    NTM5MWE4NmFjMTFkY2Q2Mjg0OWRlMmIzNTQwNDhkODM4ODFkMmE5NA==
+  size: 96272413
