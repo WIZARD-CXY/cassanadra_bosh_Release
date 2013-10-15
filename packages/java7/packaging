@@ -2,7 +2,7 @@
 set -e
 
 if [[ `uname -a` =~ "x86_64" ]] ; then
-  archive="java7/jdk-7u21-linux-x64.tar.gz"
+  archive="java/jdk-7u21-linux-x64.tar.gz"
   echo "Using 64-bit version"
 else
   echo "32-bit Java not supported"
@@ -19,7 +19,7 @@ fi
 echo "Extracting archive..."
 tar xzf $archive
 
-if [[ -d bin && `bin/java -version 2>&1` =~ "Java HotSpot" && $? == 0 ]]; then
+if [[ -d jdk1.7.0_21/bin && `jdk1.7.0_21/bin/java -version 2>&1` =~ "Java HotSpot" && $? == 0 ]]; then
   cp -a * ${BOSH_INSTALL_TARGET}
 else
   echo "JVM is not properly packaged"

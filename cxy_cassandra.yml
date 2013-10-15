@@ -1,0 +1,54 @@
+---
+name: cxy_cassandra
+director_uuid: f21dba61-68fc-4d15-b0a8-462fd82b651f
+release:
+  name: cxy_cassandra
+  version: latest
+compilation:
+  workers: 1
+  network: default
+  reuse_compilation_vms: true
+  cloud_properties:
+    instance_type: m1.small
+update:
+  canaries: 1
+  canary_watch_time: 30000
+  update_watch_time: 30000
+  max_in_flight: 4
+  max_errors: 1
+networks:
+- name: default
+  type: dynamic
+  cloud_properties:
+    security_groups:
+    - default
+- name: vip_network
+  type: vip
+  cloud_properties:
+    security_groups:
+    - default
+resource_pools:
+- name: common
+  network: default
+  size: 1
+  stemcell:
+    name: bosh-stemcell
+    version: 993
+  cloud_properties:
+    instance_type: m1.small
+  persistent_disk: 8192
+jobs:
+- name: cassandra
+  template: cassandra
+  instances: 1
+  resource_pool: common
+  networks:
+  - name: default
+    default:
+    - dns
+    - gateway
+  - name: vip_network
+    static_ips:
+    - 192.168.50.4
+  persistent_disk: 8192
+properties: {}
