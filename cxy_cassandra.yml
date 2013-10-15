@@ -27,10 +27,11 @@ networks:
   cloud_properties:
     security_groups:
     - default
+
 resource_pools:
-- name: common
+- name: warden
   network: default
-  size: 1
+  size: 2
   stemcell:
     name: bosh-stemcell
     version: 993
@@ -41,7 +42,7 @@ jobs:
 - name: cassandra
   template: cassandra
   instances: 1
-  resource_pool: common
+  resource_pool: warden 
   networks:
   - name: default
     default:
