@@ -14,7 +14,7 @@ update:
   canaries: 1
   canary_watch_time: 30000
   update_watch_time: 30000
-  max_in_flight: 4
+  max_in_flight: 1
   max_errors: 1
 networks:
 - name: default
@@ -31,7 +31,7 @@ networks:
 resource_pools:
 - name: warden
   network: default
-  size: 2
+  size: 1
   stemcell:
     name: bosh-stemcell
     version: 993
