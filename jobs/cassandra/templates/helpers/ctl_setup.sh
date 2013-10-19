@@ -6,7 +6,7 @@
 
 # Usage options:
 # source /var/vcap/jobs/foobar/helpers/ctl_setup.sh JOB_NAME OUTPUT_LABEL
-# source /var/vcap/jobs/foobar/helpers/ctl_setup.sh foobar
+# source /var/vcap/jobs//helpers/ctl_setup.sh foobar
 # source /var/vcap/jobs/foobar/helpers/ctl_setup.sh foobar foobar
 # source /var/vcap/jobs/foobar/helpers/ctl_setup.sh foobar nginx
 
@@ -76,6 +76,6 @@ do
   export CLASSPATH=${java_jar}:$CLASSPATH
 done
 
-PIDFILE=$RUN_DIR/$JOB_NAME.pid
+export PIDFILE=$RUN_DIR/$JOB_NAME.pid
 
 echo '$PATH' $PATH
