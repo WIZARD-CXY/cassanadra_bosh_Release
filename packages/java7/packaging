@@ -20,7 +20,7 @@ echo "Extracting archive..."
 tar xzf $archive
 
 if [[ -d jdk1.7.0_21/bin && `jdk1.7.0_21/bin/java -version 2>&1` =~ "Java HotSpot" && $? == 0 ]]; then
-  cp -a * ${BOSH_INSTALL_TARGET}
+  cp -a jdk1.7.0_21/* ${BOSH_INSTALL_TARGET}
 else
   echo "JVM is not properly packaged"
   exit 1
