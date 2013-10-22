@@ -47,4 +47,3 @@ bosh deploy
 ```
 
 Example `properties` for your `manifest.yml` can be taken from the examples in `examples\`
-
