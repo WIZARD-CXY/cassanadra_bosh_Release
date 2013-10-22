@@ -1,0 +1,95 @@
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+ INFO 11:02:39,758 Logging initialized
+ INFO 11:02:39,782 JVM vendor/version: Java HotSpot(TM) 64-Bit Server VM/1.7.0_21
+ INFO 11:02:39,783 Heap size: 508166144/509214720
+ INFO 11:02:39,783 Classpath: /var/vcap/packages/cassandra/bin/../conf:/var/vcap/packages/cassandra/bin/../build/classes/main:/var/vcap/packages/cassandra/bin/../build/classes/thrift:/var/vcap/packages/cassandra/bin/../lib/antlr-3.2.jar:/var/vcap/packages/cassandra/bin/../lib/apache-cassandra-1.2.10.jar:/var/vcap/packages/cassandra/bin/../lib/apache-cassandra-clientutil-1.2.10.jar:/var/vcap/packages/cassandra/bin/../lib/apache-cassandra-thrift-1.2.10.jar:/var/vcap/packages/cassandra/bin/../lib/avro-1.4.0-fixes.jar:/var/vcap/packages/cassandra/bin/../lib/avro-1.4.0-sources-fixes.jar:/var/vcap/packages/cassandra/bin/../lib/commons-cli-1.1.jar:/var/vcap/packages/cassandra/bin/../lib/commons-codec-1.2.jar:/var/vcap/packages/cassandra/bin/../lib/commons-lang-2.6.jar:/var/vcap/packages/cassandra/bin/../lib/compress-lzf-0.8.4.jar:/var/vcap/packages/cassandra/bin/../lib/concurrentlinkedhashmap-lru-1.3.jar:/var/vcap/packages/cassandra/bin/../lib/guava-13.0.1.jar:/var/vcap/packages/cassandra/bin/../lib/high-scale-lib-1.1.2.jar:/var/vcap/packages/cassandra/bin/../lib/jackson-core-asl-1.9.2.jar:/var/vcap/packages/cassandra/bin/../lib/jackson-mapper-asl-1.9.2.jar:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar:/var/vcap/packages/cassandra/bin/../lib/jbcrypt-0.3m.jar:/var/vcap/packages/cassandra/bin/../lib/jline-1.0.jar:/var/vcap/packages/cassandra/bin/../lib/json-simple-1.1.jar:/var/vcap/packages/cassandra/bin/../lib/libthrift-0.7.0.jar:/var/vcap/packages/cassandra/bin/../lib/log4j-1.2.16.jar:/var/vcap/packages/cassandra/bin/../lib/lz4-1.1.0.jar:/var/vcap/packages/cassandra/bin/../lib/metrics-core-2.2.0.jar:/var/vcap/packages/cassandra/bin/../lib/netty-3.6.6.Final.jar:/var/vcap/packages/cassandra/bin/../lib/servlet-api-2.5-20081211.jar:/var/vcap/packages/cassandra/bin/../lib/slf4j-api-1.7.2.jar:/var/vcap/packages/cassandra/bin/../lib/slf4j-log4j12-1.7.2.jar:/var/vcap/packages/cassandra/bin/../lib/snakeyaml-1.6.jar:/var/vcap/packages/cassandra/bin/../lib/snappy-java-1.0.5.jar:/var/vcap/packages/cassandra/bin/../lib/snaptree-0.1.jar:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar
+ INFO 11:02:39,785 JNA not found. Native methods will be disabled.
+ INFO 11:02:39,799 Loading settings from file:/var/vcap/data/packages/cassandra/0.1-dev.2/conf/cassandra.yaml
+ INFO 11:02:40,309 Data files directories: [/var/lib/cassandra/data]
+ INFO 11:02:40,309 Commit log directory: /var/lib/cassandra/commitlog
+ INFO 11:02:40,309 DiskAccessMode 'auto' determined to be mmap, indexAccessMode is mmap
+ INFO 11:02:40,309 disk_failure_policy is stop
+ INFO 11:02:40,318 Global memtable threshold is enabled at 161MB
+ INFO 11:02:40,496 Not using multi-threaded compaction
+ INFO 11:02:40,865 Initializing key cache with capacity of 24 MBs.
+ INFO 11:02:40,877 Scheduling key cache save to each 14400 seconds (going to save all keys).
+ INFO 11:02:40,879 Initializing row cache with capacity of 0 MBs and provider org.apache.cassandra.cache.SerializingCacheProvider
+ INFO 11:02:40,887 Scheduling row cache save to each 0 seconds (going to save all keys).
+ INFO 11:02:40,981 Initializing system.batchlog
+ INFO 11:02:41,020 Initializing system.peer_events
+ INFO 11:02:41,025 Initializing system.hints
+ INFO 11:02:41,031 Initializing system.Schema
+ INFO 11:02:41,044 Initializing system.schema_keyspaces
+ INFO 11:02:41,052 Initializing system.range_xfers
+ INFO 11:02:41,057 Initializing system.HintsColumnFamily
+ INFO 11:02:41,064 Initializing system.schema_columnfamilies
+ INFO 11:02:41,068 Initializing system.NodeIdInfo
+ INFO 11:02:41,072 Initializing system.schema_columns
+ INFO 11:02:41,077 Initializing system.IndexInfo
+ INFO 11:02:41,081 Initializing system.Migrations
+ INFO 11:02:41,087 Initializing system.peers
+ INFO 11:02:41,092 Initializing system.local
+ INFO 11:02:41,096 Initializing system.LocationInfo
+ INFO 11:02:41,350 Couldn't detect any schema definitions in local storage.
+ INFO 11:02:41,352 To create keyspaces and column families, see 'help create' in cqlsh.
+ INFO 11:02:41,401 Initializing system_traces.sessions
+ INFO 11:02:41,406 Initializing system_traces.events
+ INFO 11:02:41,416 No commitlog files found; skipping replay
+ INFO 11:02:41,729 Cassandra version: 1.2.10
+ INFO 11:02:41,729 Thrift API version: 19.36.0
+ INFO 11:02:41,729 CQL supported versions: 2.0.0,3.0.5 (default: 3.0.5)
+ INFO 11:02:41,751 Loading persisted ring state
+ INFO 11:02:41,754 Starting up server gossip
+ WARN 11:02:41,765 No host ID found, created ab7cebef-1efb-412d-ae21-4d106ffbb998 (Note: This should happen exactly once per node).
+ INFO 11:02:41,782 Enqueuing flush of Memtable-local@645036541(362/3620 serialized/live bytes, 15 ops)
+ INFO 11:02:41,786 Writing Memtable-local@645036541(362/3620 serialized/live bytes, 15 ops)
+ INFO 11:02:41,864 Completed flushing /var/lib/cassandra/data/system/local/system-local-ic-1-Data.db (352 bytes) for commitlog position ReplayPosition(segmentId=1382180561314, position=53161)
+ INFO 11:02:41,943 Starting Messaging Service on port 7000
+ WARN 11:02:42,086 Generated random token [-1716688396615168705]. Random tokens will result in an unbalanced ring; see http://wiki.apache.org/cassandra/Operations
+ INFO 11:02:42,087 Enqueuing flush of Memtable-local@1718481938(84/840 serialized/live bytes, 4 ops)
+ INFO 11:02:42,088 Writing Memtable-local@1718481938(84/840 serialized/live bytes, 4 ops)
+ INFO 11:02:42,097 Completed flushing /var/lib/cassandra/data/system/local/system-local-ic-2-Data.db (120 bytes) for commitlog position ReplayPosition(segmentId=1382180561314, position=53436)
+ INFO 11:02:42,106 Enqueuing flush of Memtable-local@1278331461(51/510 serialized/live bytes, 2 ops)
+ INFO 11:02:42,106 Writing Memtable-local@1278331461(51/510 serialized/live bytes, 2 ops)
+ INFO 11:02:42,119 Completed flushing /var/lib/cassandra/data/system/local/system-local-ic-3-Data.db (110 bytes) for commitlog position ReplayPosition(segmentId=1382180561314, position=53611)
+ INFO 11:02:42,138 Node localhost/127.0.0.1 state jump to normal
+ INFO 11:02:42,140 Startup completed! Now serving reads.
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k
+xss =  -ea -javaagent:/var/vcap/packages/cassandra/bin/../lib/jamm-0.2.5.jar -XX:+UseThreadPriorities -XX:ThreadPriorityPolicy=42 -Xms497M -Xmx497M -Xmn124M -XX:+HeapDumpOnOutOfMemoryError -Xss180k

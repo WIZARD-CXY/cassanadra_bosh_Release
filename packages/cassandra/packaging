@@ -1,6 +1,7 @@
 set -e # exit immediately if a simple command exits with a non-zero status
 set -u # report the usage of uninitialized variables
 
+CASSANDRA_VERSION="1.2.10"
 # Available variables
 # $BOSH_COMPILE_TARGET - where this package & spec'd source files are available
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
@@ -9,6 +10,6 @@ export HOME=/var/vcap
 
 PATH=/var/vcap/packages/java7/bin:$PATH
 
-tar xfv cassandra/apache-cassandra-1.2.10-bin.tar.gz
+tar xfv cassandra/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz
 # Alternatively, to copy archive contents:
-cp -a apache-cassandra-1.2.10/* $BOSH_INSTALL_TARGET
+cp -a apache-cassandra-CASSANDRA_VERSION/* $BOSH_INSTALL_TARGET

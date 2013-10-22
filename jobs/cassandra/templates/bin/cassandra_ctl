@@ -14,13 +14,14 @@ case $1 in
   start)
     pid_guard $PIDFILE $JOB_NAME
 
+    # see http://wiki.apache.org/cassandra/RunningCassandra
+    export CASSANDRA_INCLUDE=/var/vcap/jobs/cassandra/helpers/cassandra.in.sh
+
     # TODO: Run some process
-    exec cassandra \
+    exec cassandra -p $PIDFILE \
          >>$LOG_DIR/$JOB_NAME.stdout.log \
          2>>$LOG_DIR/$JOB_NAME.stderr.log
 
-    # store pid in $PIDFILE
-    echo $! > $PIDFILE
     ;;
 
   stop)
