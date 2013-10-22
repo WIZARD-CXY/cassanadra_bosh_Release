@@ -12,4 +12,4 @@ PATH=/var/vcap/packages/java7/bin:$PATH
 
 tar xfv cassandra/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz
 # Alternatively, to copy archive contents:
-cp -a apache-cassandra-CASSANDRA_VERSION/* $BOSH_INSTALL_TARGET
+cp -a apache-cassandra-$CASSANDRA_VERSION/* $BOSH_INSTALL_TARGET
