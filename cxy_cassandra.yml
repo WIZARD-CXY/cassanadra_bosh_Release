@@ -20,12 +20,12 @@ update:
 networks:
 - name: default
   subnets:
-  - reserved:
+
+  - range: 10.244.0.0/24
+    reserved:
     - 10.244.0.2 - 10.244.0.10
     static:
       - 10.244.0.50 - 10.244.0.100
-    range: 10.244.0.0/24
-    gateway: 10.244.0.1
     cloud_properties:
      name: random
 
