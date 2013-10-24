@@ -49,7 +49,4 @@ jobs:
     - 10.244.0.58
 properties:
   cassandra:
-    cluster_name: Test
-    listen_addresses:
-    - 10.244.0.54
-    - 10.244.0.58
+    cluster_name: WizardDemoCluster 
