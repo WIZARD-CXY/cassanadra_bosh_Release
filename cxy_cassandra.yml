@@ -53,19 +53,11 @@ networks:
     cloud_properties:
       name: random
 
-  - range: 10.244.0.16/30
+  - range: 10.244.0.16/29
     reserved:
       - 10.244.0.17
     static:
-      - 10.244.0.18
-    cloud_properties:
-      name: random
-
-  - range: 10.244.0.20/30
-    reserved:
-      - 10.244.0.21
-    static:
-      - 10.244.0.22
+      - 10.244.0.18-10.244.0.22
     cloud_properties:
       name: random
 
@@ -472,7 +464,7 @@ networks:
 resource_pools:
 - name: warden
   network: default
-  size: 1
+  size: 3
   stemcell:
     name: bosh-stemcell
     version: latest
@@ -480,12 +472,12 @@ resource_pools:
 jobs:
 - name: cassandra
   template: cassandra
-  instances: 1
+  instances: 2
   resource_pool: warden 
   networks:
   - name: default
     static_ips:
-    - 10.244.0.18
+    - 10.244.0.18-10.244.0.19
 properties:
   cassandra:
     cluster_name: Test
