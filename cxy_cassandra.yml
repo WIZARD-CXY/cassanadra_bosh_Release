@@ -45,7 +45,7 @@ jobs:
   networks:
   - name: default
     static_ips:
-    - 10.244.0.50-10.244.0.51
+    - 10.244.0.51-10.244.0.52
 properties:
   cassandra:
     cluster_name: Test
