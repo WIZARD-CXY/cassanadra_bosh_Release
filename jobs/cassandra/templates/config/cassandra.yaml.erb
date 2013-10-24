@@ -2,6 +2,10 @@
 <%
 cassandra = properties.cassandra
 %>
+<% require 'socket';
+ip=Socket.ip_address_list.detect{|intf| intf.ipv4_private?};
+ip.ip_address if ip;
+%>
 # NOTE:
 #   See http://wiki.apache.org/cassandra/StorageConfiguration for
 #   full explanations of configuration directives
@@ -327,7 +331,7 @@ ssl_storage_port: 7001
 # address associated with the hostname (it might not be).
 #
 # Setting this to 0.0.0.0 is always wrong.
-listen_address: 
+listen_address: <%= ip.ip_address %>
 
 # Address to broadcast to other Cassandra nodes
 # Leaving this blank will set it to the same value as listen_address
@@ -489,7 +493,7 @@ compaction_preheat_key_cache: true
 
 # Throttles all outbound streaming file transfers on this node to the
 # given total throughput in Mbps. This is necessary because Cassandra does
-# mostly sequential IO when streaming data during bootstrap or repair, which
+# mostly sequential IO when streaming data during  or repair, which
 # can lead to saturating the network connection and degrading rpc performance.
 # When unset, the default is 200 Mbps or 25 MB/s.
 # stream_throughput_outbound_megabits_per_sec: 200
