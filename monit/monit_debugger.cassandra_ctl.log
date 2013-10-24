@@ -1,0 +1,16 @@
+MONIT-DEBUG date
+Thu Oct 24 02:11:42 UTC 2013
+MONIT-DEBUG env
+MONIT_PROCESS_PID=0
+MONIT_HOST=1dc0cc78-5dd1-49f6-a718-db023544395a
+MONIT_PROCESS_CPU_PERCENT=0
+MONIT_DATE=Thu, 24 Oct 2013 02:11:42 +0000
+MONIT_PROCESS_CHILDREN=0
+MONIT_DESCRIPTION=Started
+MONIT_PROCESS_MEMORY=0
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+MONIT_SERVICE=cassandra
+PWD=/etc/sv/agent
+MONIT_EVENT=Started
+MONIT-DEBUG cassandra_ctl /var/vcap/jobs/cassandra/bin/cassandra_ctl start
+MONIT-DEBUG exit code 0
